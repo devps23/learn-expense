@@ -7,4 +7,7 @@ resource "aws_instance" "instance" {
       instance_interruption_behavior = "stop"
     }
   }
+  tags = {
+    Name = var.tagname
+  }
 }
