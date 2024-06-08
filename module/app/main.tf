@@ -1,5 +1,6 @@
 resource "aws_instance" "instance" {
   ami = "ami-090252cbe067a9e58"
+  instance_type = var.instance_type
   instance_market_options {
     market_type = "spot"
     spot_options {
