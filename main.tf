@@ -3,4 +3,5 @@ module "vault" {
   source = "./module/app"
   tagname = each.key
   instance_type = each.value["instance_type"]
+  vault_token = var.vault_token
 }
