@@ -5,3 +5,4 @@ variable "res" {
     }
   }
 }
+variable "vault_token" {}
