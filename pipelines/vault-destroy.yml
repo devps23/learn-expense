@@ -1,6 +1,6 @@
 format_version: 10
 pipelines:
-  vault:
+  vault-destroy:
     group: expense
     label_template: ${COUNT}
     lock_behavior: none
