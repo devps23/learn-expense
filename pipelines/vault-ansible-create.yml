@@ -26,6 +26,6 @@ pipelines:
           vault-ansible-job:
             timeout: 0
             tasks:
-            - exec: { command: ansible-playbook, arguments: ['get_secrets.yml','-e',vault_token], run_if: passed }
+            - exec: { command: ansible-playbook, arguments: ['get_secrets.yml','-e','vault_token'], run_if: passed }
 
 
