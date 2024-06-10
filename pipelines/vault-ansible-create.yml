@@ -1,0 +1,31 @@
+format_version: 10
+pipelines:
+  vault-create-ansible:
+    group: expense
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-2ae7d73:
+        git: https://github.com/devps23/learn-expense
+        shallow_clone: false
+        auto_update: true
+        branch: main
+    secure_variables:
+         vault_token: "AES:PrcPkcX7EQyQX/M3uIEbDA==:BamzsIiiRcROV5SjW/Fy9mo+pvD4eSLgNsMzMDUK4sc="
+
+    stages:
+    - DEV:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: manual
+          allow_only_on_success: false
+        jobs:
+          vault-ansible-job:
+            timeout: 0
+            tasks:
+            - exec: { command: ansible-playbook, arguments: ['get_secrets.yml'], run_if: passed }
+
+
