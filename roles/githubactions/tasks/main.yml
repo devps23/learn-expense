@@ -2,6 +2,7 @@
   ansible.builtin.file:
     path: github-runner
     state: directory
+  become_user: ec2-user
 
 - name: unarchive runner
   ansible.builtin.unarchive:
@@ -11,3 +12,4 @@
 
 - name: Install Libucis dependencies
   ansible.builtin.shell: /home/ec2-user/github-runner/bin/installdependencies.sh
+
