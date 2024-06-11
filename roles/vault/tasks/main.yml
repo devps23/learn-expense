@@ -4,4 +4,8 @@
 
 - name: get vault credentials
   ansible.builtin.debug:
-    msg: echo {{ secrets.user }}
+    msg: echo {{ secrets}}
+
+- name: get secrets
+  ansible.builtin.debug:
+    msg: "{{ lookup('hashi_vault', 'secret=common/data/ssh token={{secrets.user}} url=https://54.198.83.170:8200 validate_certs=False')}}"
