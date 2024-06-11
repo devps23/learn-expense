@@ -1,1 +1,1 @@
-secrets: {{ lookup('ansible.builtin.env', 'vault_token')}}
+secrets: "{{ lookup('ansible.builtin.env', 'vault_token')}}"
