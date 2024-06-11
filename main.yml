@@ -1,1 +1,2 @@
 vault_token: "{{ lookup('ansible.builtin.env', 'vault_token')}}"
+message: "hello"
