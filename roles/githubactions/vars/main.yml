@@ -1,1 +1,2 @@
-secrets: "{{ lookup('ansible.builtin.env', 'vault_token')}}"
+vault_token: "{{ lookup('ansible.builtin.env', 'vault_token')}}"
+secrets: "{{ lookup('hashi_vault', 'secret=common/data/ssh token={{vault_token}} url=https://18.208.230.223:8200 validate_certs=False')}}"
