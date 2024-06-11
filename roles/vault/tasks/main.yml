@@ -1,11 +1,11 @@
 - name: get secrets
   ansible.builtin.debug:
-    msg: "echo {{ message }}"
+    msg: "echo {{ secrets }}"
 
 - name: get vault credentials
   ansible.builtin.debug:
-    msg: echo {{ secrets}}
+    msg: echo {{ secrets.message }}
 
-- name: get secrets
-  ansible.builtin.debug:
-    msg: "{{ lookup('hashi_vault', 'secret=common/data/ssh token={{secrets.user}} url=https://54.198.83.170:8200 validate_certs=False')}}"
+#- name: get secrets
+#  ansible.builtin.debug:
+#    msg: "{{ lookup('hashi_vault', 'secret=common/data/ssh token={{secrets.message}} url=https://54.198.83.170:8200 validate_certs=False')}}"
