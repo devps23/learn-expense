@@ -1,6 +1,7 @@
 - name: make a directory
   ansible.builtin.file:
     path: github-runner
+    state: directory
 
 - name: unarchive runner
   ansible.builtin.unarchive:
