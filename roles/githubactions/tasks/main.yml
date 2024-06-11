@@ -10,4 +10,4 @@
     remote_src: yes
 
 - name: Install Libucis dependencies
-  ansible.builtin.shell: ./bin/installdependencies.sh
+  ansible.builtin.shell: bin/installdependencies.sh
