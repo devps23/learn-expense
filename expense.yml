@@ -1,0 +1,5 @@
+- name: vault credentials
+  hosts: all
+  become: true
+  roles:
+    - "{{ expense_name }}"
