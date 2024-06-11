@@ -1,2 +1,2 @@
 - name: get secrets
-    ansible.builtin.shell: " echo {{ message }}"
+  ansible.builtin.shell: " echo {{ message }}"
