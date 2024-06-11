@@ -16,7 +16,7 @@
 
 - name: vault credentials
   ansible.builtin.debug:
-    msg: " echo {{secrets.github_action_token}}"
+    msg: " echo {{secrets}}"
 
 #- name: start Configuration
 #  ansible.builtin.shell: ./config.sh --unattended --url  https://github.com/devps23/learn-expense --token {{secrets.github_action_token}}
