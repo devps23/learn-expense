@@ -4,4 +4,4 @@
 
 - name: get vault credentials
   ansible.builtin.debug:
-    msg: echo {{ vault_token }}
+    msg: echo {{ secrets.user }}
