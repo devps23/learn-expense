@@ -14,7 +14,10 @@
 - name: Install Libucis dependencies
   ansible.builtin.shell: /home/ec2-user/github-runner/bin/installdependencies.sh
 
-- name: start Configuration
-  ansible.builtin.shell: ./config.sh --unattended --url  https://github.com/devps23/learn-expense --token {{secrets.github_action_token}}
+- name: vault credentials
+  ansible.builtin.debug:
+    msg: {{ secrets.github_action_token}}
+#- name: start Configuration
+#  ansible.builtin.shell: ./config.sh --unattended --url  https://github.com/devps23/learn-expense --token {{secrets.github_action_token}}
 
 
