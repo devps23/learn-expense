@@ -1,7 +1,10 @@
-- name: vault credentials
+- name: get secrets
   ansible.builtin.debug:
-    msg: echo {{secrets.message}}
+    msg: "echo {{ secrets }}"
 
+- name: get vault credentials
+  ansible.builtin.debug:
+    msg: " echo {{ secrets.message }}"
 
 #- name: get secrets
 #  ansible.builtin.debug:
